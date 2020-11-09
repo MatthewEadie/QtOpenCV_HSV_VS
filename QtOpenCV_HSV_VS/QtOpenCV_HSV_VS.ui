@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtOpenCV_HSV_VSClass</class>
+ <widget class="QMainWindow" name="QtOpenCV_HSV_VSClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>548</width>
+    <height>323</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QtOpenCV_HSV_VS</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>Adjust the HSV range until the target object is the only part of the image isolated in white.</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="defaultButton">
+      <property name="text">
+       <string> Default Settings </string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>H_MIN</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QSlider" name="H_Min_Slider">
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QSpinBox" name="hminBox">
+      <property name="maximum">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>H_MAX</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QSlider" name="H_Max_Slider">
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QSpinBox" name="hmaxBox">
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>S_MIN</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0">
+     <widget class="QSlider" name="S_Min_Slider">
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QSpinBox" name="sminBox">
+      <property name="maximum">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>S_MAX</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0">
+     <widget class="QSlider" name="S_Max_Slider">
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1">
+     <widget class="QSpinBox" name="smaxBox">
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>V_MIN</string>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="0">
+     <widget class="QSlider" name="V_Min_Slider">
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="1">
+     <widget class="QSpinBox" name="vminBox">
+      <property name="maximum">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>V_MAX</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0">
+     <widget class="QSlider" name="V_Max_Slider">
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>255</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="1">
+     <widget class="QSpinBox" name="vmaxBox">
+      <property name="maximum">
+       <number>255</number>
+      </property>
+      <property name="value">
+       <number>255</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="QtOpenCV_HSV_VS.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>vminBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>V_Min_Slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>255</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>225</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>vmaxBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>V_Max_Slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>302</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>225</x>
+     <y>302</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sminBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>S_Min_Slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>225</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>smaxBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>S_Max_Slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>208</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>225</x>
+     <y>208</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hminBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>H_Min_Slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>225</x>
+     <y>67</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>hmaxBox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>H_Max_Slider</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>114</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>225</x>
+     <y>114</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V_Min_Slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>vminBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>225</x>
+     <y>255</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>493</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>V_Max_Slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>vmaxBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>225</x>
+     <y>302</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>493</x>
+     <y>302</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>S_Min_Slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>sminBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>225</x>
+     <y>161</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>493</x>
+     <y>161</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>S_Max_Slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>smaxBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>225</x>
+     <y>208</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>493</x>
+     <y>208</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>H_Min_Slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hminBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>225</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>493</x>
+     <y>67</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>H_Max_Slider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>hmaxBox</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>225</x>
+     <y>114</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>493</x>
+     <y>114</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
