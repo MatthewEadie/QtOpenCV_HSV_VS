@@ -1,1 +1,8 @@
-﻿  QtOpenCV_HSV_VS.vcxproj -> C:\Users\Matthew Eadie\Source\Repos\snowomi\QtOpenCV_HSV_VS\x64\Debug\QtOpenCV_HSV_VS.exe
+﻿  uic QtOpenCV_HSV_VS.ui
+  QtOpenCV_HSV_VS.cpp
+  main.cpp
+C:\Users\Matthew Eadie\source\repos\snowomi\QtOpenCV_HSV_VS\QtOpenCV_HSV_VS\QtOpenCV_HSV_VS.h(45,20): warning C5208: unnamed class used in typedef name cannot declare members other than non-static data members, member enumerations, or member classes (compiling source file QtOpenCV_HSV_VS.cpp)
+C:\Users\Matthew Eadie\source\repos\snowomi\QtOpenCV_HSV_VS\QtOpenCV_HSV_VS\QtOpenCV_HSV_VS.h(45,20): warning C5208: unnamed class used in typedef name cannot declare members other than non-static data members, member enumerations, or member classes (compiling source file main.cpp)
+  moc_QtOpenCV_HSV_VS.cpp
+C:\Users\Matthew Eadie\source\repos\snowomi\QtOpenCV_HSV_VS\QtOpenCV_HSV_VS\QtOpenCV_HSV_VS.h(45,20): warning C5208: unnamed class used in typedef name cannot declare members other than non-static data members, member enumerations, or member classes
+  QtOpenCV_HSV_VS.vcxproj -> C:\Users\Matthew Eadie\Source\Repos\snowomi\QtOpenCV_HSV_VS\x64\Debug\QtOpenCV_HSV_VS.exe
