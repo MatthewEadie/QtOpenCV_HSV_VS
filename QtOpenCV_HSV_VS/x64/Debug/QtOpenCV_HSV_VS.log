@@ -1,3 +1,1 @@
-﻿  QtOpenCV_HSV_VS.cpp
-D:\VS19 repos\QtOpenCV_HSV_VS\QtOpenCV_HSV_VS\QtOpenCV_HSV_VS.h(45,20): warning C5208: unnamed class used in typedef name cannot declare members other than non-static data members, member enumerations, or member classes
-  QtOpenCV_HSV_VS.vcxproj -> D:\VS19 repos\QtOpenCV_HSV_VS\x64\Debug\QtOpenCV_HSV_VS.exe
+﻿  QtOpenCV_HSV_VS.vcxproj -> C:\Users\Matthew Eadie\Source\Repos\snowomi\QtOpenCV_HSV_VS\x64\Debug\QtOpenCV_HSV_VS.exe
